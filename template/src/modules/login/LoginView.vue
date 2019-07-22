@@ -14,7 +14,7 @@
                     <vs-input icon="lock" :label-placeholder="$t('senha')" type="password" style="margin: 20px 0px 10px 0px" v-model="usuario.senha"/>
 
                     <ank-alert :icon="iconError" v-if="erroLogin" color="#E74C3C35" lineColor="#E74C3C" textColor="#E74C3C" style="margin-bottom: 10px; width: 98%">
-                        <span>{{ erroLogin }}</span>
+                        <span>\{{ erroLogin }}</span>
                     </ank-alert>
 
                     <div class="login-form--formulario__acoes">

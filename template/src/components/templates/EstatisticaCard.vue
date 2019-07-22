@@ -2,17 +2,17 @@
     <div class="card">
         <vs-row class="card--header">
             <vs-col vs-type="flex" vs-justify="flex-start" vs-align="flex-start" vs-w="12">
-                <span class="titulo">{{ titulo }}</span>
+                <span class="titulo">\{{ titulo }}</span>
             </vs-col>
         </vs-row>
 
         <vs-row class="card--bottom">
             <vs-col vs-type="flex" vs-justify="left" vs-align="flex-end" vs-w="6" vs-sm="12">
                 <vs-icon :icon="icone" size="small" :color="corIcone" style="float: left"></vs-icon>
-                <span style="float: right" :style="{ 'color': corIcone }">{{ rentabilidade }}</span>
+                <span style="float: right" :style="{ 'color': corIcone }">\{{ rentabilidade }}</span>
             </vs-col>
             <vs-col vs-type="flex" vs-justify="flex-end" vs-align="flex-end" vs-w="6" vs-sm="12">
-                <span class="valor">{{ valor }}</span>
+                <span class="valor">\{{ valor }}</span>
             </vs-col>
         </vs-row>
     </div>

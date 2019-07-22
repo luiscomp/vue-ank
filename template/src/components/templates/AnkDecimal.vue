@@ -1,6 +1,6 @@
 <template>
     <div class="vs-component vs-con-input-label vs-input vs-input-primary">
-        <label for="" class="vs-input--label">{{ label }}</label>
+        <label for="" class="vs-input--label">\{{ label }}</label>
         <div class="vs-con-input">
             <money v-model="numberValue" v-bind="moneyFormat" class="vs-inputx vs-input--input normal" :style="{'text-align': right ? 'end' : 'start'}" style="border: 1px solid rgba(0, 0, 0, 0.2);" @keyup.enter.native="enter"/>
         </div>
