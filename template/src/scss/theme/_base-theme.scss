@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box
+}
+html, body {
+    font-family: 'Rajdhani', Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0px;
+}
+
+.ank-full-content {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.ank-main--content {
+    background-image: url(../assets/tile_bg_2.png);
+}
+
+.page-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+.content-scroll {
+    height: 100%;
+    position: relative;
+
+    .scroll {
+        position: absolute;
+        top: 10px;
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+        overflow: auto;
+    }
+}
+
+.box {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid $cor-sombra;
+    border-radius: 5px;
+}
+
+/* SCROLL */
+/* width */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+// BUTTONS
+button {
+    font-weight: bold;
+    font-family: 'Rajdhani';
+    height: 34px;
+}
+
+// MODIFICAÇÕES DO ESTILO DO VUESAX
+.con-vs-tabs {
+    height: 100% !important;
+
+    .con-slot-tabs {
+        height: calc(100% - 30px) !important;
+
+        .vs-tabs--content {
+            height: 100% !important;
+        }
+    }
+}
+
+.vs-popup--content {
+    height: 100% !important;
+}

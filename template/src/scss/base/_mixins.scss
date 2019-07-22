@@ -1,0 +1,15 @@
+@mixin page_content {
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+@mixin card_content {
+    background-color: $cor-card;
+    border: 0px solid $cor-card;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 2px 4px 0px $cor-sombra;
+    -moz-box-shadow: 0px 2px 4px 0px $cor-sombra;
+    box-shadow: 0px 2px 4px 0px $cor-sombra;
+}

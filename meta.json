@@ -1,0 +1,19 @@
+{
+    "schema": {
+        "name": {
+            "type": "string",
+            "required": true,
+            "label": "Project name"
+        },
+        "description": {
+            "type": "string",
+            "required": true,
+            "label": "Project description",
+            "default": "Template VueJS with Vuesax + EsLint + SASS + i18n and more"
+        },
+        "author": {
+            "type": "string",
+            "label": "Author"
+        }
+    }
+}

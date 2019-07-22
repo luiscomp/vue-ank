@@ -1,0 +1,62 @@
+.login-bg {
+    height: 100%;
+    width: 100%;
+    float: left;
+    background: url(../assets/imagens/login_bg.png);
+    background-size: cover;
+    background-position: center;
+    background-color: $cor-primaria
+}
+.login-form {
+    position: fixed;
+    width: 250px;
+    top: calc(50% - 125px);
+    left: calc(50% - 125px);
+    opacity: 0;
+    transition: all 800ms ease-in-out;
+
+    @media (min-width: $md) {
+        width: 350px;
+        top: calc(50% - 145px);
+        left: calc(50% - 175px);
+    }
+
+    &__visivel {
+        opacity: 1;
+    }
+
+    &--formulario {
+        background-color: $cor-background;
+        border: 1px solid $cor-background;
+        border-radius: 5px;
+        box-shadow: 3px 3px 6px 2px $cor-sombra;
+
+        .conteudo-formulario {
+            padding: 0px 30px 30px 30px;
+        }
+
+        .vs-input {
+            width: 100%;
+        }
+
+        &__acoes {
+            display: flex;
+            height: 26px;
+        }
+    }
+
+    &--footer {
+        position: fixed;
+        width: 100%;
+        left: 0px;
+        bottom: 0px;
+        text-align: center;
+        padding: 5px;
+
+        span {
+            font-size: 12px;
+            font-weight: bold;
+            color: $cor-background;
+        }
+    }
+}

@@ -1,0 +1,12 @@
+.estatisticas-content {
+    @include page_content;
+
+    &--header {
+        height: 80px;
+
+        h1 {
+            font-size: 28px;
+            font-weight: lighter;
+        }
+    }
+}
