@@ -3,11 +3,11 @@
         <vs-navbar class="ank-navbar" style="background-color: #FFFFFF">
             <div slot="title">
                 <vs-navbar-title>
-                    {{ $t('app_name') }}
+                    \{{ $t('app_name') }}
                 </vs-navbar-title>
             </div>
             <vs-navbar-item index="0">
-                <a href="/">{{ $t('sair') }}</a>
+                <a href="/">\{{ $t('sair') }}</a>
 
             </vs-navbar-item>
         </vs-navbar>
@@ -27,19 +27,19 @@
                         <template v-for="(submenu, j) in menu.submenus">
                             <vs-sidebar-group v-if="submenu.submenus" :title="$t(submenu.name)" :key="j">
                                 <vs-sidebar-item v-for="(sub_submenu, k) in submenu.submenus" :index="sub_submenu.path" :icon="sub_submenu.icon" :key="k" :to="sub_submenu.path">
-                                    {{ $t(sub_submenu.name) }}
+                                    \{{ $t(sub_submenu.name) }}
                                 </vs-sidebar-item>
                             </vs-sidebar-group>
 
                             <vs-sidebar-item v-else :index="submenu.path" :icon="submenu.icon" :key="j" :to="submenu.path">
-                                {{ $t(submenu.name) }}
+                                \{{ $t(submenu.name) }}
                             </vs-sidebar-item>
                         </template>
 
                     </vs-sidebar-group>
 
                     <vs-sidebar-item v-else :index="menu.path" :icon="menu.icon" :key="i" :to="menu.path">
-                        {{ $t(menu.name) }}
+                        \{{ $t(menu.name) }}
                     </vs-sidebar-item>
                 </template>
 

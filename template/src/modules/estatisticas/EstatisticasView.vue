@@ -2,7 +2,7 @@
     <div class="estatisticas-content">
         <vs-row class="estatisticas-content--header">
             <vs-col vs-type="flex" vs-justify="left" vs-align="center" vs-w="12">
-                <h1>{{ $t('visao_global') }}</h1>
+                <h1>\{{ $t('visao_global') }}</h1>
             </vs-col>
         </vs-row>
 

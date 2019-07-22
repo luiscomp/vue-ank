@@ -7,18 +7,18 @@
                         <clipper-fixed ref="clipper" :src="imagem" bg-color="black" preview="fixed-preview" class="cropper" :ratio="ratio"/>
                     </div>
                     <div class="container--prev">
-                        <span>{{ $t('pre_visualizacao') }}</span>
+                        <span>\{{ $t('pre_visualizacao') }}</span>
                         <clipper-preview name="fixed-preview" :src="imagem" class="preview"/>
-                        <vs-button v-if="imagem !== ''" color="primary" type="flat" style="margin-top: 10px; width: 100%" @click="concluir">{{ $t('concluir').toUpperCase() }}</vs-button>
+                        <vs-button v-if="imagem !== ''" color="primary" type="flat" style="margin-top: 10px; width: 100%" @click="concluir">\{{ $t('concluir').toUpperCase() }}</vs-button>
                     </div>
                 </div>
 
                 <template slot="footer">
                     <ank-alert icon="new_releases">
-                        <span>{{ $t('carregue_uma_imagem') }}</span>
+                        <span>\{{ $t('carregue_uma_imagem') }}</span>
                     </ank-alert>
 
-                    <clipper-upload ref="uploadFile" v-model="imagem" class="vs-button vs-button-primary vs-button-border vs-button-flat" style="width: 180px; margin-left: 10px">{{ $t('carregar_imagem').toUpperCase() }}</clipper-upload>
+                    <clipper-upload ref="uploadFile" v-model="imagem" class="vs-button vs-button-primary vs-button-border vs-button-flat" style="width: 180px; margin-left: 10px">\{{ $t('carregar_imagem').toUpperCase() }}</clipper-upload>
                 </template>
             </ank-page>
         </vs-popup>
