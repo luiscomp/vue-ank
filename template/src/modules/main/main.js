@@ -27,7 +27,23 @@ export default {
     },
     methods: {
         sair() {
-            this.$router.push('/login')
+            this.$vs.dialog({
+                type: 'confirm',
+                color: 'primary',
+                title: this.$t('atencao'),
+                text: this.$t('deseja_sair'),
+                acceptText: this.$t('sim'),
+                cancelText: this.$t('nao'),
+                accept: () => {
+                    this.$router.push('/')
+                    this.$storage.clear(true)
+                    this.limparTodosStores()
+                }
+            })
+        },
+        limparTodosStores() {
+            this.$store.dispatch('loginStore/limparStore')
+            this.$store.dispatch('limparStore')
         }
     }
 }

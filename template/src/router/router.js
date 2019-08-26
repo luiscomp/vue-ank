@@ -4,6 +4,7 @@ import Router from 'vue-router'
 function route(view) {
     return {
         path: view.toLowerCase(),
+        name: view,
         component: () => import(`../modules/${view.toLowerCase()}/${view}View.vue`)
     }
 }

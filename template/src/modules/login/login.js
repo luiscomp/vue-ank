@@ -2,13 +2,6 @@ import { mapState, mapActions } from 'vuex'
 export default {
     data() {
         return {
-            usuario: {
-                cpf: '123.456.789-00',
-                senha: '123456',
-                empresa: {
-                    codigo: 1
-                }
-            },
             loading: false,
             loginVisible: false,
             erroLogin: null,
@@ -16,24 +9,32 @@ export default {
         }
     },
     mounted() {
-        setTimeout(() => {
-            this.loginVisible = true
-        }, 200)
+        if (!this.seLogado()) {
+            setTimeout(() => {
+                this.loginVisible = true
+            }, 200)
+        } else {
+            this.exibirTelaPrincipal()
+        }
     },
     computed: {
         ...mapState('loginStore', {
-
+            usuario: state => state.usuario
         })
     },
     methods: {
         ...mapActions('loginStore', [
-            'login'
+            'login',
+            'limparStore'
         ]),
+        seLogado() {
+            return this.$storage.get('usuario', false)
+        },
         signIn() {
             this.loading = true
             this.login(this.usuario).then(resp => {
                 this.loading = false
-                this.$router.push('/estatisticas')
+                this.armazenarDadosUsuario()
             }).catch(e => {
                 this.loading = false
                 if (e.data) {
@@ -44,6 +45,14 @@ export default {
                     this.erroLogin = this.$t('servico_indisponivel')
                 }
             })
+        },
+        armazenarDadosUsuario() {
+            this.$storage.set('usuario', { ...this.usuario })
+
+            this.exibirTelaPrincipal()
+        },
+        exibirTelaPrincipal() {
+            this.$router.push('/estatisticas')
         }
     }
 }

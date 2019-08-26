@@ -7,8 +7,7 @@
                 </vs-navbar-title>
             </div>
             <vs-navbar-item index="0">
-                <a href="/">\{{ $t('sair') }}</a>
-
+                <a @click="sair()" style="cursor: pointer">\{{ $t('sair') }}</a>
             </vs-navbar-item>
         </vs-navbar>
 

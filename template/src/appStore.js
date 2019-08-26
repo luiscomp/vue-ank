@@ -16,6 +16,9 @@ export function createStore() {
         },
 
         mutations: {
+            LIMPAR_STORE(state) {
+                state.loading = false
+            },
             SHOW_LOADING(state, root) {
                 root.$vs.loading({
                     type: 'default'
@@ -26,11 +29,12 @@ export function createStore() {
                 root.$vs.loading.close()
                 state.loading = false
             },
-            SHOW_NOTIFY(state, { root, title, text, color, icon, position }) {
+            SHOW_NOTIFY(state, { root, title, text, color, fixed, icon, position }) {
                 root.$vs.notify({
                     title: title,
                     text: text,
                     color: color,
+                    fixed: fixed,
                     icon: icon,
                     position: position
                 })
@@ -70,6 +74,9 @@ export function createStore() {
         },
 
         actions: {
+            limparStore({ commit }) {
+                commit('LIMPAR_STORE')
+            },
             showLoading({ commit }, root) {
                 commit('SHOW_LOADING', root)
             },
