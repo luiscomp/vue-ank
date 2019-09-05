@@ -2,7 +2,7 @@
     <p align="center">
         <img src="assets/ank_icon.png?v=4&s=200" width="200" height="200" alt="Icon modifyed per @luiscomp from a icon made by Freepik from www.flaticon.com">
     </p>
-    <h1 align="center">Vue-Ank Template</h1>
+    <h1 align="center">Vue-Ank Template (Clean)</h1>
     <p align="center">Template VueJS with Vuesax + EsLint + SASS + i18n and more</p>
 </div>
 
